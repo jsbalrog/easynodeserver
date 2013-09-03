@@ -16,10 +16,6 @@ app.configure('development', function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
-app.configure('production', function(){
-  app.use(express.errorHandler());
-});
-
 // Start server
 var port = process.env.PORT || 3000;
 app.listen(port, function() {
