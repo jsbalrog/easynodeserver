@@ -1,19 +1,10 @@
-/**
- * Module dependencies.
- */
+'use strict;'
 
-var express = require('express');
-
-var app = express();
+const express = require('express');
+const app = express();
 
 // Configuration
-app.configure(function(){
-  app.use(express.static(__dirname + '/public'));
-});
-
-app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-});
+app.use(express.static(__dirname + '/public'));
 
 // Start server
 var port = process.env.PORT || 3000;
